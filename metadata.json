@@ -1,0 +1,6 @@
+{
+  "name": "AQL Inspection Table & Sampling Plan Matrix",
+  "description": "Interactive ANSI/ASQ Z1.4 & ISO 2859-1 Acceptable Quality Limit (AQL) sampling tables, lot size code calculator, defect inspection template builder, and QC audit report generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

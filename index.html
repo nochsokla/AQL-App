@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AQL Inspection Table & Sampling Plan Matrix</title>
+    <meta name="description" content="Interactive ANSI/ASQ Z1.4 & ISO 2859-1 Acceptable Quality Limit (AQL) sampling tables, lot size code calculator, defect inspection template builder, and QC audit report generator." />
+    <meta property="og:title" content="AQL Inspection Table & Sampling Plan Matrix" />
+    <meta property="og:description" content="Interactive ANSI/ASQ Z1.4 & ISO 2859-1 Acceptable Quality Limit (AQL) sampling tables, lot size code calculator, defect inspection template builder, and QC audit report generator." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              brand: {
+                50: '#F0F5FA',
+                100: '#E1ECF5',
+                200: '#C2D9EB',
+                500: '#0284C7',
+                700: '#0369A1',
+                900: '#0C4A6E',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      // Register service worker for offline remote factory operation
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => console.log('AQL Matrix Service Worker ready for offline caching:', reg.scope))
+            .catch((err) => console.warn('Service Worker registration skipped or failed:', err));
+        });
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background-color: #F8FAFC;
+        color: #0F172A;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      html.dark body {
+        background-color: #0B0F19;
+        color: #F1F5F9;
+      }
+      .tabular-nums {
+        font-variant-numeric: tabular-nums;
+      }
+      @media print {
+        header, nav, .no-print, button:not(.print-include) {
+          display: none !important;
+        }
+        body, html.dark body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .print-container {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          box-shadow: none !important;
+          border: none !important;
+        }
+        .page-break {
+          page-break-before: always;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.0/",
+    "react/": "https://esm.sh/react@^19.2.0/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.24",
+    "lucide-react": "https://esm.sh/lucide-react@^0.553.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

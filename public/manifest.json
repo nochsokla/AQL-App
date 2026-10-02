@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "Alpha AQL Inspection Matrix",
+  "short_name": "AQL Matrix",
+  "description": "ANSI/ASQ Z1.4 & ISO 2859-1 AQL inspection calculator, sampling matrix, offline defect audit sheet, and digital sign-off report.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0F172A",
+  "background_color": "#0F172A",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
